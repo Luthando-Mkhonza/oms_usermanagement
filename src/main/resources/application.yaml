@@ -6,10 +6,10 @@ spring:
     name: oms_usermanagement
 
   datasource:
-    url: jdbc:mysql://localhost:3306/user_db
-    username: root
-    password: "12345"
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://localhost:5432/user_db
+    username: postgres
+    password: "1234"
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
@@ -18,3 +18,7 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: false
+
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 86400000 # 1 day in milliseconds
